@@ -3,10 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./src/styles.css">
+
 </head>
 <body>
-    <h1>Hello World</h1>
+    <header class="site-header">
+      <a href="./" class="logo">
+        <img src="src/images/logo.png" class="logo"/>
+      </a>
+    </header>
+
+    <main id="app">
+        <section>
+            <div id="menu"></div>
+            <div id="to-do"></div>
+            <div id="done"></div>
+            <div id="notes"></div>
+            <div id="timer"></div>
+            <div id="clock"></div>
+
+        </section>
+
+        <!-- App content will be rendered here -->          
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year">year</span> DWS. All rights reserved.</p>        
+    </footer>
+    
     
 </body>
 </html>
