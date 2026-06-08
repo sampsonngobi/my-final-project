@@ -89,3 +89,47 @@ footer {
   margin-top: 2rem;
 }
 
+/* Clock and Time Widget Styles */
+
+#clock {
+  width: 500px;
+  max-width: 100%;
+}
+
+.time-widget {
+  width: 100%;
+  min-height: 250px;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--cards);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-widget-inner {
+  text-align: center;
+}
+
+.time-widget-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  margin-bottom: 1rem;
+}
+
+.time-widget-time {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.time-widget-date {
+  font-family: var(--font-body);
+  color: #e2e8f0;
+}
+
