@@ -1,0 +1,16 @@
+{
+  "name": "my-final-project",
+  "version": "0.1.0",
+  "description": "This is my WDD 330 final project",
+  "author": "Sampson Ngobi",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

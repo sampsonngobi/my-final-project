@@ -1,0 +1,8 @@
+:root{
+  --accent: #0066cc;
+  --bg: #f7f9fb;
+  --text: #0b2140;
+}
+*{
+  box-sizing: border-box;
+}
