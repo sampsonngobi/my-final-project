@@ -1,0 +1,24 @@
+{
+  "defaultTimezones": [
+    { "name": "UTC", "timezone": "UTC" },
+    { "name": "EST", "timezone": "America/New_York" },
+    { "name": "PST", "timezone": "America/Los_Angeles" },
+    { "name": "GMT", "timezone": "Europe/London" },
+    { "name": "IST", "timezone": "Asia/Kolkata" },
+    { "name": "JST", "timezone": "Asia/Tokyo" }
+  ],
+  "allTimezones": [
+    { "name": "UTC", "timezone": "UTC" },
+    { "name": "EST (Eastern)", "timezone": "America/New_York" },
+    { "name": "CST (Central)", "timezone": "America/Chicago" },
+    { "name": "MST (Mountain)", "timezone": "America/Denver" },
+    { "name": "PST (Pacific)", "timezone": "America/Los_Angeles" },
+    { "name": "GMT (London)", "timezone": "Europe/London" },
+    { "name": "CET (Paris)", "timezone": "Europe/Paris" },
+    { "name": "IST (India)", "timezone": "Asia/Kolkata" },
+    { "name": "GST (Dubai)", "timezone": "Asia/Dubai" },
+    { "name": "JST (Tokyo)", "timezone": "Asia/Tokyo" },
+    { "name": "AEST (Sydney)", "timezone": "Australia/Sydney" },
+    { "name": "NZST (Auckland)", "timezone": "Pacific/Auckland" }
+  ]
+}
