@@ -40,44 +40,6 @@ body {
     margin-right: 1rem;
 }
 
-.top-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.top-section-top{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-}
-
-.top-section-bottom{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2rem;
-    gap: 1rem;
-}
-
-.winget{
-    /* background-color: var(--cards);  */
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-family: var(--font-body);
-    width: 500px;
-    /* height: 300px; */
-    text-align: center;
-    
-} 
-
 footer {
   background-color: var(--secondary);
   color: var(--primary);
@@ -1018,24 +980,35 @@ footer {
 /* ===== Layout: make all widgets the same height (equal-height rows) ===== */
 :root {
   --widget-min-height: 250px;
+  --grid-gap: clamp(0.75rem, 2vw, 2rem);
+  --grid-max-width: 1200px;
 }
 
-/* Each row should stretch its columns to the tallest widget */
+/* ===== Responsive layout: single grid for all widgets ===== */
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: stretch;
+  align-items: stretch;
+  gap: var(--grid-gap);
+  width: 100%;
+  max-width: var(--grid-max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Inner wrappers no longer control layout (grid does). */
 .top-section-top,
 .top-section-bottom {
-  display: flex;
-  gap: 2rem;
-  align-items: stretch;
+  display: contents;
 }
 
-/* The outer placeholders (#clock, #calculator, etc.) become flex containers */
 .winget {
-  flex: 1;
   display: flex;
   align-items: stretch;
 }
 
-/* The real widget cards inserted by JS */
+/* Real widget cards inserted by JS */
 .time-widget,
 .timezone-widget,
 .calculator-widget,
@@ -1067,6 +1040,20 @@ footer {
 .calendar-events-list {
   flex: 1;
   overflow-y: auto;
+}
+
+/* Tablets: 2 columns */
+@media (min-width: 481px) {
+  .top-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktops: 3 columns */
+@media (min-width: 1025px) {
+  .top-section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* Extra Small Devices (320px - 480px) */
@@ -1461,183 +1448,26 @@ footer {
     }
 }
 
-/* Large Devices - Desktops (1025px - 1440px) */
+/* Large Devices - Desktops (1025px - 1440px)
+   Layout is handled by the responsive grid above; kept only widget typography/spacing as needed. */
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .top-section {
-        flex-direction: row;
-        padding: 2rem;
-        gap: 2rem;
-    }
-
-    .top-section-top {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        margin-bottom: 2rem;
-    }
-
-    .top-section-bottom {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        margin-bottom: 0;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .winget {
-        width: 500px;
-        height: 300px;
-    }
-
-    #clock,
-    #to-do {
-        width: 500px;
-    }
-
-    .time-widget {
-        min-height: 250px;
-    }
-
-    .time-widget-time {
-        font-size: 3rem;
-    }
-
-    .timezone-widget {
-        min-height: 250px;
-    }
-
-    .timezone-list {
-        max-height: 150px;
-    }
-
-    #calculator {
-        width: 500px;
-    }
-
-    .calculator-widget {
-        min-height: 250px;
-    }
-
-    .calculator-display {
-        font-size: 1.75rem;
-    }
-
-    #todo,
-    #notes,
-    #calendar {
-        width: 500px;
-    }
-
-    .todo-widget,
-    .notes-widget,
-    .calendar-widget {
-        min-height: 250px;
-    }
-
-    .todo-list,
-    .notes-list {
-        max-height: 150px;
-    }
-
-    .notes-input {
-        min-height: 65px;
-        max-height: 80px;
-    }
-
-    .calendar-events-list {
-        max-height: 120px;
-    }
+    .time-widget-time { font-size: 3rem; }
+    .calculator-display { font-size: 1.75rem; }
+    .timezone-list { max-height: 150px; }
+    .todo-list, .notes-list { max-height: 150px; }
+    .notes-input { min-height: 65px; max-height: 80px; }
+    .calendar-events-list { max-height: 120px; }
 }
 
-/* Extra Large Devices (1441px+) */
+/* Extra Large Devices (1441px+)
+   Layout is handled by the responsive grid above; kept only internal sizing/typography as needed. */
 @media (min-width: 1441px) {
-    .top-section {
-        flex-direction: column;
-        padding: 2.5rem;
-        gap: 2.5rem;
-        background-color: #22c55e;
-    }
-
-    .top-section-top {
-        display: flex;
-        flex-direction: row;
-        gap: 2.5rem;
-        margin-bottom: 2.5rem;
-    }
-
-    .top-section-bottom {
-        display: flex;
-        flex-direction: row;
-        gap: 2.5rem;
-        margin-bottom: 0;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .winget {
-        width: 520px;
-        height: 320px;
-    }
-
-    #clock,
-    #to-do {
-        width: 520px;
-    }
-
-    .time-widget {
-        min-height: 270px;
-    }
-
-    .time-widget-time {
-        font-size: 3.5rem;
-    }
-
-    .timezone-widget {
-        min-height: 270px;
-    }
-
-    .timezone-list {
-        max-height: 170px;
-    }
-
-    #calculator {
-        width: 520px;
-    }
-
-    .calculator-widget {
-        min-height: 270px;
-    }
-
-    .calculator-display {
-        font-size: 1.9rem;
-    }
-
-    #todo,
-    #notes,
-    #calendar {
-        width: 520px;
-    }
-
-    .todo-widget,
-    .notes-widget,
-    .calendar-widget {
-        min-height: 270px;
-    }
-
-    .todo-list,
-    .notes-list {
-        max-height: 160px;
-    }
-
-    .notes-input {
-        min-height: 70px;
-        max-height: 85px;
-    }
-
-    .calendar-events-list {
-        max-height: 130px;
-    }
+    .time-widget-time { font-size: 3.5rem; }
+    .timezone-list { max-height: 170px; }
+    .calculator-display { font-size: 1.9rem; }
+    .todo-list, .notes-list { max-height: 160px; }
+    .notes-input { min-height: 70px; max-height: 85px; }
+    .calendar-events-list { max-height: 130px; }
 }
 
 /* Landscape Orientation */
