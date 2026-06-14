@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Inter:wght@400&family=JetBrains+Mono:wght@400&display=swap');
 
-    :root {
+:root {
   --primary: #ffffff;
   --secondary: #1E293B;
   --background: #000000;
@@ -31,9 +31,6 @@ body {
   padding: 1rem 2rem;
   background-color: var(--secondary);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 
 .logo{
@@ -71,15 +68,15 @@ body {
 }
 
 .winget{
-    background-color: var(--cards); 
+    /* background-color: var(--cards);  */
     padding: 0.5rem 1rem;
     border-radius: 5px;
     font-family: var(--font-body);
     width: 500px;
-    height: 300px;
+    /* height: 300px; */
     text-align: center;
     
-}
+} 
 
 footer {
   background-color: var(--secondary);
@@ -313,4 +310,1372 @@ footer {
 
 .add-timezone-btn:active {
     transform: translateY(0);
+}
+
+/* Calculator Widget Styles */
+
+#calculator {
+    width: 500px;
+    max-width: 100%;
+}
+
+.calculator-widget {
+    width: 100%;
+    min-height: 250px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--cards);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.calculator-widget-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+.calculator-widget-label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-display {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: right;
+    font-family: var(--font-mono);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--primary);
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.calc-btn {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.calc-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.calc-btn:active {
+    transform: translateY(0);
+}
+
+.calc-btn-number {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.calc-btn-operator {
+    background-color: rgba(255, 182, 46, 0.3);
+    border-color: rgba(255, 182, 46, 0.5);
+    color: #ffb62e;
+}
+
+.calc-btn-operator:hover {
+    background-color: rgba(255, 182, 46, 0.5);
+}
+
+.calc-btn-clear {
+    background-color: rgba(239, 68, 68, 0.3);
+    border-color: rgba(239, 68, 68, 0.5);
+    color: #ef4444;
+}
+
+.calc-btn-clear:hover {
+    background-color: rgba(239, 68, 68, 0.5);
+}
+
+.calc-btn-equals {
+    background-color: rgba(34, 197, 94, 0.3);
+    border-color: rgba(34, 197, 94, 0.5);
+    color: #22c55e;
+    grid-column: span 1;
+}
+
+.calc-btn-equals:hover {
+    background-color: rgba(34, 197, 94, 0.5);
+}
+
+.calc-btn-zero {
+    grid-column: span 2;
+}
+
+.calc-btn-decimal {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== TO-DO LIST STYLES ===== */
+
+#todo {
+    width: 500px;
+    max-width: 100%;
+}
+
+.todo-widget {
+    width: 100%;
+    min-height: 250px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--cards);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.todo-widget-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.todo-widget-label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+    margin-bottom: 0.25rem;
+}
+
+.todo-input-section {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 0.6rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+}
+
+.todo-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.todo-add-btn {
+    padding: 0.6rem 1rem;
+    background-color: var(--primary);
+    color: var(--background);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.todo-add-btn.todo-save-mode {
+    background-color: #22c55e;
+}
+
+.todo-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.todo-tab {
+    flex: 1;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.todo-tab:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.todo-tab.active {
+    background-color: var(--primary);
+    color: var(--background);
+}
+
+.todo-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 80px;
+    max-height: 150px;
+    padding-right: 0.5rem;
+}
+
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.todo-item-done {
+    opacity: 0.6;
+}
+
+.todo-item-done .todo-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.todo-checkbox {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.todo-text {
+    flex: 1;
+    color: var(--primary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+.todo-actions {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.todo-edit-btn,
+.todo-delete-btn {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.todo-edit-btn:hover {
+    color: var(--primary);
+}
+
+.todo-delete-btn:hover {
+    color: #ef4444;
+}
+
+.todo-empty {
+    text-align: center;
+    color: #94a3b8;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+
+/* ===== NOTES STYLES ===== */
+
+#notes {
+    width: 500px;
+    max-width: 100%;
+}
+
+.notes-widget {
+    width: 100%;
+    min-height: 250px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--cards);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.notes-widget-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.notes-widget-label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+    margin-bottom: 0.25rem;
+}
+
+.notes-input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.notes-input {
+    padding: 0.6rem;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--primary);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    resize: vertical;
+    min-height: 60px;
+    max-height: 80px;
+}
+
+.notes-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.notes-save-btn {
+    padding: 0.6rem;
+    background-color: var(--primary);
+    color: var(--background);
+    border: none;
+    border-radius: 5px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.notes-save-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+.notes-save-btn.note-update-mode {
+    background-color: #3b82f6;
+}
+
+.notes-list {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 80px;
+    max-height: 120px;
+    padding-right: 0.5rem;
+}
+
+.notes-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notes-list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border-left: 3px solid var(--primary);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.note-item:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.note-item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.note-item-preview {
+    color: var(--primary);
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.note-item-date {
+    color: #94a3b8;
+    font-size: 0.7rem;
+}
+
+.note-item-actions {
+    display: flex;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
+}
+
+.note-edit-btn,
+.note-delete-btn {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.note-edit-btn:hover {
+    color: var(--primary);
+}
+
+.note-delete-btn:hover {
+    color: #ef4444;
+}
+
+.notes-empty {
+    text-align: center;
+    color: #94a3b8;
+    padding: 1rem;
+    font-size: 0.85rem;
+}
+
+/* ===== CALENDAR STYLES ===== */
+
+#calendar {
+    width: 500px;
+    max-width: 100%;
+}
+
+.calendar-widget {
+    width: 100%;
+    min-height: 250px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: var(--cards);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.calendar-widget-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    height: 100%;
+}
+
+.calendar-widget-label {
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #cbd5e1;
+    margin-bottom: 0.25rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-nav-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--primary);
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calendar-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.calendar-month-year {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    font-weight: 600;
+    flex: 1;
+    text-align: center;
+}
+
+.calendar-days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-day-label {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 0.75rem;
+    flex: 1;
+}
+
+.calendar-cell {
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    padding: 0.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.65rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.calendar-cell:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: var(--primary);
+}
+
+.calendar-cell-empty {
+    cursor: default;
+    background-color: transparent;
+    border: none;
+}
+
+.calendar-cell-empty:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.calendar-cell-today {
+    background-color: rgba(34, 197, 94, 0.2);
+    border-color: #22c55e;
+}
+
+.calendar-cell-day {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.calendar-cell-event-indicator {
+    background-color: var(--primary);
+    color: var(--background);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.calendar-events-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.5rem;
+}
+
+.calendar-events-label {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.calendar-events-list {
+    max-height: 80px;
+    overflow-y: auto;
+}
+
+.calendar-events-date {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.calendar-event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+}
+
+.calendar-event-text {
+    flex: 1;
+    color: var(--primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.calendar-event-delete {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 0.5rem;
+    font-size: 0.7rem;
+}
+
+.calendar-event-delete:hover {
+    color: #ef4444;
+}
+
+.calendar-events-empty {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* ===== Layout: make all widgets the same height (equal-height rows) ===== */
+:root {
+  --widget-min-height: 250px;
+}
+
+/* Each row should stretch its columns to the tallest widget */
+.top-section-top,
+.top-section-bottom {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+/* The outer placeholders (#clock, #calculator, etc.) become flex containers */
+.winget {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+/* The real widget cards inserted by JS */
+.time-widget,
+.timezone-widget,
+.calculator-widget,
+.todo-widget,
+.notes-widget,
+.calendar-widget {
+  width: 100%;
+  min-height: var(--widget-min-height);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make the “inner” wrappers consume the widget height */
+.time-widget-inner,
+.timezone-widget-inner,
+.calculator-widget-inner,
+.todo-widget-inner,
+.notes-widget-inner,
+.calendar-widget-inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let scrollable sections take remaining space evenly */
+.timezone-list,
+.todo-list,
+.notes-list,
+.calendar-events-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Extra Small Devices (320px - 480px) */
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.5rem;
+    }
+
+    body {
+        line-height: 1.4;
+    }
+
+    .top-section {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .top-section-top,
+    .top-section-bottom {
+        margin-bottom: 1rem;
+        gap: 0.75rem;
+    }
+
+    .winget {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        padding: 1rem 0.5rem;
+    }
+
+    #clock,
+    #to-do {
+        width: 100%;
+    }
+
+    .time-widget {
+        min-height: 180px;
+        padding: 1rem;
+    }
+
+    .time-widget-time {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .time-widget-label {
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .time-widget-date {
+        font-size: 0.85rem;
+    }
+
+    .timezone-widget {
+        min-height: 200px;
+        padding: 1rem;
+    }
+
+    .timezone-list {
+        max-height: 120px;
+        min-height: 80px;
+    }
+
+    .timezone-item {
+        padding: 0.5rem;
+    }
+
+    .timezone-item-time {
+        font-size: 1rem;
+    }
+
+    .timezone-item-name,
+    .timezone-item-date {
+        font-size: 0.7rem;
+    }
+
+    .timezone-controls {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .timezone-select,
+    .add-timezone-btn {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        padding: 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    #calculator {
+        width: 100%;
+    }
+
+    .calculator-widget {
+        min-height: 200px;
+        padding: 1rem;
+    }
+
+    .calculator-display {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+
+    .calculator-buttons {
+        gap: 0.35rem;
+    }
+
+    .calc-btn {
+        padding: 0.6rem;
+        font-size: 0.85rem;
+    }
+
+    #todo,
+    #notes,
+    #calendar {
+        width: 100%;
+    }
+
+    .todo-widget,
+    .notes-widget,
+    .calendar-widget {
+        min-height: 180px;
+        padding: 1rem;
+    }
+
+    .todo-list,
+    .notes-list {
+        max-height: 80px;
+        min-height: 60px;
+    }
+
+    .notes-input {
+        min-height: 50px;
+        max-height: 60px;
+        font-size: 0.75rem;
+    }
+
+    .calendar-grid {
+        gap: 1px;
+    }
+
+    .calendar-cell {
+        padding: 0.2rem;
+        font-size: 0.6rem;
+    }
+
+    .calendar-events-list {
+        max-height: 60px;
+    }
+}
+
+/* Small Devices (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .top-section-top,
+    .top-section-bottom {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 0;
+        gap: 1rem;
+    }
+
+    .winget {
+        width: calc(50% - 0.5rem);
+        max-width: none;
+        height: auto;
+        min-height: 220px;
+    }
+
+    #clock,
+    #to-do {
+        width: calc(50% - 0.5rem);
+        max-width: none;
+    }
+
+    .time-widget {
+        min-height: 200px;
+        padding: 1.25rem;
+    }
+
+    .time-widget-time {
+        font-size: 2.5rem;
+    }
+
+    .timezone-widget {
+        min-height: 220px;
+        padding: 1.25rem;
+    }
+
+    .timezone-list {
+        max-height: 140px;
+    }
+
+    .timezone-item-time {
+        font-size: 1.1rem;
+    }
+
+    .timezone-controls {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .timezone-select {
+        flex: 1;
+    }
+
+    #calculator {
+        width: calc(50% - 0.5rem);
+        max-width: none;
+    }
+
+    .calculator-widget {
+        min-height: 220px;
+        padding: 1.25rem;
+    }
+
+    .calculator-display {
+        font-size: 1.5rem;
+        padding: 0.75rem;
+    }
+
+    .calc-btn {
+        padding: 0.65rem;
+        font-size: 0.9rem;
+    }
+
+    #todo,
+    #notes,
+    #calendar {
+        width: calc(50% - 0.5rem);
+        max-width: none;
+    }
+
+    .todo-widget,
+    .notes-widget,
+    .calendar-widget {
+        min-height: 220px;
+        padding: 1.25rem;
+    }
+
+    .todo-list,
+    .notes-list {
+        max-height: 120px;
+    }
+
+    .notes-input {
+        min-height: 55px;
+        max-height: 70px;
+    }
+
+    .calendar-grid {
+        gap: 2px;
+    }
+
+    .calendar-events-list {
+        max-height: 80px;
+    }
+}
+
+/* Medium Devices - Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .top-section {
+        flex-direction: row;
+        padding: 1.75rem;
+        gap: 1.75rem;
+        flex-wrap: wrap;
+    }
+
+    .top-section-top {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-bottom: 0;
+    }
+
+    .top-section-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .winget {
+        width: 45%;
+        height: 280px;
+    }
+
+    #clock,
+    #to-do {
+        width: 45%;
+    }
+
+    .time-widget {
+        min-height: 240px;
+    }
+
+    .time-widget-time {
+        font-size: 2.75rem;
+    }
+
+    .timezone-widget {
+        min-height: 240px;
+    }
+
+    .timezone-list {
+        max-height: 160px;
+    }
+
+    #calculator {
+        width: 45%;
+    }
+
+    .calculator-widget {
+        min-height: 240px;
+    }
+
+    .calculator-display {
+        font-size: 1.6rem;
+    }
+
+    .calc-btn {
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
+
+    #todo,
+    #notes,
+    #calendar {
+        width: 45%;
+    }
+
+    .todo-widget,
+    .notes-widget,
+    .calendar-widget {
+        min-height: 240px;
+    }
+
+    .todo-list,
+    .notes-list {
+        max-height: 140px;
+    }
+
+    .notes-input {
+        min-height: 60px;
+        max-height: 75px;
+    }
+
+    .calendar-grid {
+        gap: 2px;
+    }
+
+    .calendar-events-list {
+        max-height: 100px;
+    }
+}
+
+/* Large Devices - Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .top-section {
+        flex-direction: row;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .top-section-top {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .top-section-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .winget {
+        width: 500px;
+        height: 300px;
+    }
+
+    #clock,
+    #to-do {
+        width: 500px;
+    }
+
+    .time-widget {
+        min-height: 250px;
+    }
+
+    .time-widget-time {
+        font-size: 3rem;
+    }
+
+    .timezone-widget {
+        min-height: 250px;
+    }
+
+    .timezone-list {
+        max-height: 150px;
+    }
+
+    #calculator {
+        width: 500px;
+    }
+
+    .calculator-widget {
+        min-height: 250px;
+    }
+
+    .calculator-display {
+        font-size: 1.75rem;
+    }
+
+    #todo,
+    #notes,
+    #calendar {
+        width: 500px;
+    }
+
+    .todo-widget,
+    .notes-widget,
+    .calendar-widget {
+        min-height: 250px;
+    }
+
+    .todo-list,
+    .notes-list {
+        max-height: 150px;
+    }
+
+    .notes-input {
+        min-height: 65px;
+        max-height: 80px;
+    }
+
+    .calendar-events-list {
+        max-height: 120px;
+    }
+}
+
+/* Extra Large Devices (1441px+) */
+@media (min-width: 1441px) {
+    .top-section {
+        flex-direction: column;
+        padding: 2.5rem;
+        gap: 2.5rem;
+        background-color: #22c55e;
+    }
+
+    .top-section-top {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .top-section-bottom {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+        margin-bottom: 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .winget {
+        width: 520px;
+        height: 320px;
+    }
+
+    #clock,
+    #to-do {
+        width: 520px;
+    }
+
+    .time-widget {
+        min-height: 270px;
+    }
+
+    .time-widget-time {
+        font-size: 3.5rem;
+    }
+
+    .timezone-widget {
+        min-height: 270px;
+    }
+
+    .timezone-list {
+        max-height: 170px;
+    }
+
+    #calculator {
+        width: 520px;
+    }
+
+    .calculator-widget {
+        min-height: 270px;
+    }
+
+    .calculator-display {
+        font-size: 1.9rem;
+    }
+
+    #todo,
+    #notes,
+    #calendar {
+        width: 520px;
+    }
+
+    .todo-widget,
+    .notes-widget,
+    .calendar-widget {
+        min-height: 270px;
+    }
+
+    .todo-list,
+    .notes-list {
+        max-height: 160px;
+    }
+
+    .notes-input {
+        min-height: 70px;
+        max-height: 85px;
+    }
+
+    .calendar-events-list {
+        max-height: 130px;
+    }
+}
+
+/* Landscape Orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .site-header {
+        padding: 0.5rem 1rem;
+    }
+
+    .top-section {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .winget {
+        height: auto;
+        min-height: 150px;
+    }
+
+    .time-widget,
+    .timezone-widget {
+        min-height: 150px;
+        padding: 0.75rem;
+    }
+
+    .time-widget-time {
+        font-size: 2rem;
+    }
+
+    .timezone-list {
+        max-height: 100px;
+    }
+}
+
+/* High Resolution Displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    /* Ensure crisp text rendering */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
 }
